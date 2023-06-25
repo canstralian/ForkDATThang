@@ -25,7 +25,6 @@ Discord RAT is an advanced remote access trojan written in Python and controlled
 - Requests library: Install using `pip install requests`
 - Netifaces library: Install using `pip install netifaces`
 - PyAutoGUI library: Install using `pip install pyautogui`
-- Nmap (optional): Required for network scanning. Install Nmap on your system.
 
 ## Usage
 
