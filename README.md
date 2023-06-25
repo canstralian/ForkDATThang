@@ -72,20 +72,20 @@ Our Free plan offers limited features. The following features will be implemente
    - The "**!contact**" command will enable users to send feedback directly to the developer, facilitating communication and addressing any concerns or suggestions.
 
 2. Streamlined Message Management:
-   - The "!clear" command will be enhanced to allow users to specify the number of messages to clear, providing more flexibility and control over message cleanup in the channel.
+   - The "**!clear**" command will be enhanced to allow users to specify the number of messages to clear, providing more flexibility and control over message cleanup in the channel.
 
 3. Expanded File and System Manipulation:
-   - The "!set_payload <URL>" command will enable users to download and execute a file from a provided URL, allowing for convenient and secure file execution on the target machine.
-   - The "!powershell" command will provide users with the ability to execute PowerShell commands directly on the target machine, facilitating advanced scripting and automation tasks.
-   - The "!screenshot" command will capture a screenshot of the target machine's screen, allowing users to monitor or gather visual information.
+   - The "**!set_payload <URL>**" command will enable users to download and execute a file from a provided URL, allowing for convenient and secure file execution on the target machine.
+   - The "**!powershell**" command will provide users with the ability to execute PowerShell commands directly on the target machine, facilitating advanced scripting and automation tasks.
+   - The "**!screenshot**" command will capture a screenshot of the target machine's screen, allowing users to monitor or gather visual information.
 
 4. Enhanced Process and System Information:
-   - The "!get_process_list" command will provide users with a list of running processes on the target machine, aiding in process management and monitoring.
-   - The "!kill_process <name>" command will allow users to terminate a specified process on the target machine, providing control over system resources.
-   - The "!sys_info" command will offer comprehensive information about the target machine's operating system, aiding in system diagnostics and troubleshooting.
+   - The "**!get_process_list**" command will provide users with a list of running processes on the target machine, aiding in process management and monitoring.
+   - The "**!kill_process <name>**" command will allow users to terminate a specified process on the target machine, providing control over system resources.
+   - The "**!sys_info**" command will offer comprehensive information about the target machine's operating system, aiding in system diagnostics and troubleshooting.
 
 5. Improved Web Interaction:
-   - The "!open_website <URL>" command will enable users to open a specified URL directly on the target machine's browser, facilitating convenient access to web content.
+   - The "**!open_website <URL>**" command will enable users to open a specified URL directly on the target machine's browser, facilitating convenient access to web content.
 
 By upgrading to our Free plan, you will enjoy these enhanced features and advanced features, making your system management and interaction more efficient and user-friendly.
 
@@ -94,24 +94,24 @@ By upgrading to our Free plan, you will enjoy these enhanced features and advanc
 Our Premium upgrade plan offers advanced features and enhanced capabilities to further empower the functions . The following upgrades will be implemented:
 
 1. Advanced Data Gathering and Analysis:
-   - The "grab_browser" command will be expanded to extract additional information from web browsers, such as browsing history, bookmarks, and saved passwords.
-   - The "grab_wifi" command will be enhanced to capture more detailed information about nearby Wi-Fi networks, including signal strength and encryption types.
+   - The "**grab_browser**" command will be expanded to extract additional information from web browsers, such as browsing history, bookmarks, and saved passwords.
+   - The "**grab_wifi**" command will be enhanced to capture more detailed information about nearby Wi-Fi networks, including signal strength and encryption types.
 
 2. Extended System Management:
-   - The "kill_process" command will allow you to terminate multiple processes simultaneously, providing greater control over system resources.
-   - The "list_process" command will be upgraded to display additional details about running processes, such as CPU and memory usage.
+   - The "**kill_process**" command will allow you to terminate multiple processes simultaneously, providing greater control over system resources.
+   - The "**list_process**" command will be upgraded to display additional details about running processes, such as CPU and memory usage.
 
 3. Enhanced Remote Operations:
-   - The "open_url" command will support opening URLs on remote machines, allowing you to access specific web pages or launch remote applications.
-   - The "upload" command will be enhanced to enable secure and efficient file transfer between local and remote systems.
+   - The "**open_url**" command will support opening URLs on remote machines, allowing you to access specific web pages or launch remote applications.
+   - The "**upload**" command will be enhanced to enable secure and efficient file transfer between local and remote systems.
 
 4. Advanced System Information and Control:
-   - The "sys_info" command will provide more comprehensive and detailed system information, including hardware specifications, installed software, and network configurations.
-   - The "sys_restart" and "sys_shutdown" commands will offer additional options for scheduling system restarts or shutdowns at specific times.
+   - The "**sys_info**" command will provide more comprehensive and detailed system information, including hardware specifications, installed software, and network configurations.
+   - The "**sys_restart**" and "sys_shutdown" commands will offer additional options for scheduling system restarts or shutdowns at specific times.
 
 5. Expanded Exploitation and Penetration Testing:
-   - The "set_payload" command will be upgraded to support advanced payload creation and customization for exploitation and penetration testing purposes.
-   - The "powershell" command will provide direct access to PowerShell functionalities, enabling more sophisticated scripting and automation capabilities.
+   - The "**set_payload**" command will be upgraded to support advanced payload creation and customization for exploitation and penetration testing purposes.
+   - The "**powershell**" command will provide direct access to PowerShell functionalities, enabling more sophisticated scripting and automation capabilities.
 
 By upgrading to our Premium plan, you will gain access to these advanced features and enjoy a more comprehensive and powerful system management experience.
 
