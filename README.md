@@ -126,15 +126,15 @@ Our Premium upgrade plan offers advanced features and enhanced capabilities to f
 
 By upgrading to our Premium plan, you will gain access to these advanced features and enjoy a more comprehensive and powerful system management experience.
 
-## Pricing
+## Upgrade to Premium
 
 Unlock additional features and upgrade to the premium version!
 
-For more information on premium features and pricing, please contact @email_id
+For more information on premium features and pricing, please contact `business@redalliance.com`
 
 ## Support
 
-For any questions or support regarding this RAT, please contact @email_id
+For any questions or support regarding this RAT, please contact `faq@redalliance.com`
 
 ## Contributing
 
