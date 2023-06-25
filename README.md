@@ -51,27 +51,40 @@ To build the RAT executable (.exe) file, you can use pyinstaller. Follow these s
 - After the build process completes, the executable file will be available in the dist directory.
 
 
-## Available Commands
+# Command List
 
-- `!set_payload <URL>`: Download and execute a file from the provided URL.
-- `!info`: Display information about the bot.
-- `!clear [amount]`: Clear a specified number of messages in the channel (default: 5).
-- `!bot_help`: Display the help message with available commands.
-- `!powershell <command>`: Execute a PowerShell command on the target machine.
-- `!geolocate`: Get the geolocation information of the target machine.
-- `!screenshot`: Take a screenshot of the target machine's screen.
-- `!webcam_snap`: Capture a photo using the target machine's webcam.
-- `!scan_network`: Scan the local network for active hosts.
-- `!list_interfaces`: List the network interfaces on the target machine.
-- `!get_mac <IP>`: Get the MAC address of a specified IP address.
-- `!get_process_list`: Get a list of running processes on the target machine.
-- `!kill_process <name>`: Kill a specified process on the target machine.
-- `!get_startup_programs`: Get a list of startup programs on the target machine.
-- `!get_system_info`: Get information about the target machine's operating system.
-- `!open_website <URL>`: Open a website on the target machine's default browser.
-- `!keylogger_start`: Start the keylogger on the target machine.
-- `!keylogger_dump`: Dump the recorded keystrokes from the target machine.
-- `!keylogger_stop`: Stop the keylogger on the target machine.
+A list of available commands for the bot.
+
+- `bot_help` - Shows the help message for the bot.
+- `bot_restart` - Restarts the bot.
+- `bot_shutdown` - Shuts down the bot.
+- `bypass_uac` - Bypasses User Account Control (UAC).
+- `camic` - Takes a webcam photo.
+- `clear` - Clears the current channel or chat.
+- `delete` - Deletes a file or directory.
+- `download` - Downloads a file from a URL.
+- `grab_browser` - Grabs browser-related information.
+- `grab_history` - Grabs browsing history.
+- `grab_wifi` - Grabs saved Wi-Fi passwords.
+- `help` - Shows this message.
+- `info` - Shows information about the bot.
+- `kill_process` - Terminates a running process.
+- `list_process` - Lists the running processes.
+- `move` - Moves a file or directory.
+- `open_url` - Opens a URL in the default browser.
+- `ping` - Checks the network latency to a specified host.
+- `powershell` - Executes a PowerShell command or script.
+- `rename` - Renames a file or directory.
+- `screenlogger` - Logs screen activity.
+- `screenshot` - Takes a screenshot of the screen.
+- `set_payload` - Sets a payload by providing a URL to download and execute a file.
+- `sys_info` - Retrieves system information.
+- `sys_restart` - Restarts the system.
+- `sys_shutdown` - Shuts down the system.
+- `upload` - Uploads a file.
+
+Please note that some commands may have security implications or are typically associated with malicious activities. Use them responsibly and in accordance with applicable laws and regulations.
+
 
 ## Free Plan
   
