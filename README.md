@@ -67,9 +67,9 @@ Discord RAT is an advanced remote access trojan written in Python and controlled
 Our Free plan offers limited features. The following features will be implemented:
 
 1. Improved Information and Interaction:
-   - The "!info" command will provide more detailed information about the bot, including its capabilities and version.
-   - The "!bot_help" command will display an updated and user-friendly help message, guiding users through the available commands and    their usage.
-   - The "!contact" command will enable users to send feedback directly to the developer, facilitating communication and addressing any concerns or suggestions.
+   - The "**!info**" command will provide more detailed information about the bot, including its capabilities and version.
+   - The "**!bot_help**" command will display an updated and user-friendly help message, guiding users through the available commands and    their usage.
+   - The "**!contact**" command will enable users to send feedback directly to the developer, facilitating communication and addressing any concerns or suggestions.
 
 2. Streamlined Message Management:
    - The "!clear" command will be enhanced to allow users to specify the number of messages to clear, providing more flexibility and control over message cleanup in the channel.
