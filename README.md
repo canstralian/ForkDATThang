@@ -63,7 +63,7 @@ Discord RAT is an advanced remote access trojan written in Python and controlled
 - `!keylogger_dump`: Dump the recorded keystrokes from the target machine.
 - `!keylogger_stop`: Stop the keylogger on the target machine.
 
-  ## Basic Plan
+## Basic Plan
   
 Our Basic plan offers limited features and enhanced capabilities . The following features will be implemented:
 
