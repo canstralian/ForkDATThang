@@ -63,9 +63,9 @@ Discord RAT is an advanced remote access trojan written in Python and controlled
 - `!keylogger_dump`: Dump the recorded keystrokes from the target machine.
 - `!keylogger_stop`: Stop the keylogger on the target machine.
 
-## Basic Plan
+## Free Plan
   
-Our Basic plan offers limited features and enhanced capabilities . The following features will be implemented:
+Our Free plan offers limited features. The following features will be implemented:
 
 1. Improved Information and Interaction:
    - The "!info" command will provide more detailed information about the bot, including its capabilities and version.
@@ -88,7 +88,7 @@ Our Basic plan offers limited features and enhanced capabilities . The following
 5. Improved Web Interaction:
    - The "!open_website <URL>" command will enable users to open a specified URL directly on the target machine's browser, facilitating convenient access to web content.
 
-By upgrading to our Preminum plan, you will enjoy these enhanced features and advanced features, making your system management and interaction more efficient and user-friendly.
+By upgrading to our Free plan, you will enjoy these enhanced features and advanced features, making your system management and interaction more efficient and user-friendly.
 
 ## Preminum Plan
 
@@ -115,6 +115,16 @@ Our Premium upgrade plan offers advanced features and enhanced capabilities to f
    - The "powershell" command will provide direct access to PowerShell functionalities, enabling more sophisticated scripting and automation capabilities.
 
 By upgrading to our Premium plan, you will gain access to these advanced features and enjoy a more comprehensive and powerful system management experience.
+
+## Pricing
+
+Unlock additional features and upgrade to the premium version!
+
+For more information on premium features and pricing, please contact @email_id
+
+## Support
+
+For any questions or support regarding this RAT, please contact @email_id
 
 ## Contributing
 
