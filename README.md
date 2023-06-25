@@ -47,7 +47,7 @@ To build the RAT executable (.exe) file, you can use pyinstaller. Follow these s
 Install pyinstaller by running pip install pyinstaller.
 Open a terminal or command prompt.
 Navigate to the project directory.
-Run the following command: pyinstaller --onefile --noconsole rat.py.
+Run the following command: `pyinstaller --onefile --noconsole rat.py`.
 After the build process completes, the executable file will be available in the dist directory.
 
 
