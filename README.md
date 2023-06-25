@@ -6,7 +6,7 @@ Discord RAT is an advanced remote access trojan written in Python and controlled
 
 ## Features
 
-- **Spy Mode**: Stay informed about suspicious activities and data breaches! It provides real-time notifications on user activities and credential leaks.
+- **Spy Mode**: It provides real-time notifications on user activities and credential leaks.
 - **Encryption**: Encrypt the connection with the target, making it secure and undetectable.
 - **Task Scheduler**: Schedule specific tasks for future execution on the target machine.
 - **Network Management**: Manage and control multiple targets in a single interface. Create, edit, and delete targets on the go.
