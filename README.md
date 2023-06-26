@@ -155,5 +155,5 @@ Contributions to this project are welcome. If you have any suggestions, bug repo
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to modify and distribute the code, but remember to adhere to the license terms.
+This project is licensed under the **No Modification License**. No one has permission to modify, distribute, or use this code for any purpose. This code is provided for educational purposes only and should not be used for any malicious activities. The author is not responsible for any consequences resulting from the misuse of this code.
 
