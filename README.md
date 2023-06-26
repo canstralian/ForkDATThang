@@ -20,10 +20,7 @@ Discord RAT is an advanced remote access trojan written in Python and controlled
 - Plyer library: Install using `pip install plyer`
 - PyAudio library: Install using `pip install pyaudio`
 - OpenCV library: Install using `pip install opencv-python`
-- Geocoder library: Install using `pip install geocoder`
-- Geopy library: Install using `pip install geopy`
 - Requests library: Install using `pip install requests`
-- Netifaces library: Install using `pip install netifaces`
 - PyAutoGUI library: Install using `pip install pyautogui`
 
 ## Usage
