@@ -143,11 +143,11 @@ By upgrading to our Premium plan, you will gain access to these advanced feature
 
 Unlock additional features and upgrade to the premium version!
 
-For more information on premium features and pricing, please contact `business@redalliance.com`
+For more information on premium features and pricing, please contact ``
 
 ## Support
 
-For any questions or support regarding this RAT, please contact `faq@redalliance.com`
+For any questions or support regarding this RAT, please contact ``
 
 ## Contributing
 
