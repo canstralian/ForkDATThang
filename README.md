@@ -50,6 +50,9 @@ To build the RAT executable (.exe) file, you can use pyinstaller. Follow these s
 - Run the following command: `pyinstaller --onefile --noconsole Dat.py`
 - After the build process completes, the executable file will be available in the dist directory.
 
+## Defender Evasion
+
+This RAT is designed to evade detection by traditional antivirus software. However, it's important to note that the effectiveness of evasion techniques may vary over time as antivirus systems improve. While efforts have been made to make the RAT undetectable, it cannot be guaranteed that it will evade all antivirus solutions. It's always recommended to use such tools responsibly and legally.
 
 # Command List
 
