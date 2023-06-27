@@ -1,4 +1,4 @@
-# Discord RAT (Remote Access Trojan)
+# Discord RAT (Remote Access Trojan) 
 
 Discord RAT is an advanced remote access trojan written in Python and controlled through the Discord platform with a dedicated GUI builder. It provides various features for controlling and managing remote machines, including executing commands, geolocation tracking, capturing screenshots, webcam snapshots, network scanning, process management, system information retrieval, website opening, keylogging, and more.
 
