@@ -75,33 +75,34 @@ Please note that some commands may have security implications or are typically a
 
  All features from the Free Plan, plus the following:
 
-- `!bot_help`       - Shows the help message for the bot.
-- `!bot_restart`    - Restarts the bot.
-- `!bot_shutdown`   - Shuts down the bot.
-- `!bypass_uac`     - Bypasses User Account Control (UAC) with administrator permissions.
-- `!camic`          - Takes a webcam photo.
-- `!clear`          - Clears the current screen or messages in the channel.
-- `!delete`         - Deletes a file or directory.
-- `!download`       - Downloads a file from a specified URL.
-- `!grab_browser`   - Retrieves information about the default browser.
-- `!grab_history`   - Retrieves browsing history from the default browser.
-- `!grab_wifi`      - Retrieves information about saved Wi-Fi networks.
-- `!help`           - Shows a help message or provides assistance.
-- `!info`           - Displays information about the bot.
-- `!kill_process`   - Terminates a running process.
-- `!list_process`   - Lists all running processes.
-- `!move`           - Moves a file or directory to a new location.
-- `!open_url`       - Opens a specified URL in the default browser.
-- `!ping`           - Checks the latency (ping) to a specified destination.
-- `!powershell`     - Executes a PowerShell command or script.
-- `!rename`         - Renames a file or directory.
-- `!screenlogger`   - Toggles the screenlogger on or off to capture screen activity.
-- `!screenshot`     - Takes a screenshot of the screen.
-- `!set_payload`    - Sets a payload by providing a URL to download and execute a file on the target system.
-- `!sys_info`       - Retrieves system information.
-- `!sys_restart`    - Restarts the system.
-- `!sys_shutdown`   - Shuts down the system.
-- `!upload`         - Uploads a file.
+- !bot_help          - Shows the help message for the bot.
+- !bot_restart       - Restarts the bot.
+- !bot_shutdown      - Shuts down the bot.
+- !bypass_uac        - Bypasses User Account Control (UAC) with administrator privileges.
+- !camic             - Takes a webcam photo.
+- !clear             - Clears the current screen or messages in the channel.
+- !delete            - Deletes a file or directory.
+- !download          - Downloads a file from a specified URL.
+- !grab_browser      - Retrieves information about the default browser.
+- !grab_history      - Retrieves browsing history from the default browser.
+- !grab_wifi         - Retrieves information about saved Wi-Fi networks.
+- !help              - Shows a help message or provides assistance.
+- !info              - Displays information about the bot.
+- !kill_process      - Terminates a running process.
+- !list_process      - Lists all running processes.
+- !move              - Moves a file or directory to a new location.
+- !open_url          - Opens a specified URL in the default browser.
+- !ping              - Checks the latency (ping) to a specified destination.
+- !powershell        - Executes an interactive PowerShell session with elevated privileges.
+- !rename            - Renames a file or directory.
+- !screenlogger      - Toggles the screenlogger on or off to capture screen activity.
+- !screenshot        - Takes a screenshot of the screen.
+- !set_payload       - Sets a payload by providing a URL to download and execute a file on the target system.
+- !sys_info          - Retrieves more system information.
+- !sys_restart       - Restarts the system.
+- !sys_shutdown      - Shuts down the system.
+- !upload            - Uploads a file.
+
 
 
 By upgrading to our Premium plan, you will have access to these advanced features and enjoy a more comprehensive and powerful system management experience.
