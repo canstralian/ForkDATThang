@@ -55,7 +55,25 @@ This RAT is designed to evade detection by traditional antivirus software. Howev
 
 # Command List
 
-A list of available commands for the bot.
+ A list of available commands for the bot.
+
+- `!info` - Display information about the bot
+- `!bot_help` - Display this help message
+- `!clear [amount]` - Clear a specified number of messages in the channel (default: 5)
+- `!contact` - Send feedback to the developer
+- `!set_payload <URL>` - Download and execute a file from the provided URL
+- `!powershell` - Execute a PowerShell command on the target machine
+- `!screenshot` - Take a screenshot of the target machine's screen
+- `!get_process_list` - Get a list of running processes on the target machine
+- `!kill_process <name>` - Kill a specified process on the target machine
+- `!sys_info` - Get information about the target machine's operating system
+- `!open_website <URL>` - Open a specified URL on the target machine
+
+Please note that some commands may have security implications or are typically associated with malicious activities. Use them responsibly and in accordance with applicable laws and regulations.
+
+## Premium Plan
+
+- All features from the Free Plan, plus the following:
 
 - `!bot_help`       - Shows the help message for the bot.
 - `!bot_restart`    - Restarts the bot.
@@ -86,42 +104,7 @@ A list of available commands for the bot.
 - `!upload`         - Uploads a file.
 
 
-Please note that some commands may have security implications or are typically associated with malicious activities. Use them responsibly and in accordance with applicable laws and regulations.
-
-
-## Free Plan
-
-- `!info` - Display information about the bot
-- `!bot_help` - Display this help message
-- `!clear [amount]` - Clear a specified number of messages in the channel (default: 5)
-- `!contact` - Send feedback to the developer
-- `!set_payload <URL>` - Download and execute a file from the provided URL
-- `!powershell` - Execute a PowerShell command on the target machine
-- `!screenshot` - Take a screenshot of the target machine's screen
-- `!get_process_list` - Get a list of running processes on the target machine
-- `!kill_process <name>` - Kill a specified process on the target machine
-- `!sys_info` - Get information about the target machine's operating system
-- `!open_website <URL>` - Open a specified URL on the target machine
-
-## Premium Plan
-
-- All features from the Free Plan, plus the following:
-
-- `!grab_browser` - Retrieve additional information from web browsers, such as browsing history, bookmarks, and saved passwords
-- `!grab_wifi` - Capture more detailed information about nearby Wi-Fi networks, including signal strength and encryption types
-- `!list_process` - Display additional details about running processes, such as CPU and memory usage
-- `!sys_restart [time]` - Restart the target machine with the option to schedule it at a specific time
-- `!sys_shutdown [time]` - Shut down the target machine with the option to schedule it at a specific time
-- `!open_url <URL>` - Open a specified URL on remote machines
-- `!upload <file_path>` - Transfer files between local and remote systems securely
-- `!advanced_sys_info` - Get more comprehensive and detailed system information, including hardware specifications, installed software, and network configurations
-- `!advanced_set_payload <URL>` - Create and customize advanced payloads for exploitation and penetration testing
-- `!advanced_powershell` - Access advanced PowerShell functionalities for scripting and automation
-
 By upgrading to our Premium plan, you will have access to these advanced features and enjoy a more comprehensive and powerful system management experience.
-
-
-By upgrading to our Premium plan, you will gain access to these advanced features and enjoy a more comprehensive and powerful system management experience.
 
 ## Upgrade to Premium
 
