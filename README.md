@@ -55,7 +55,7 @@ This RAT is designed to evade detection by traditional antivirus software. Howev
 
 # Command List
 
- A list of available commands for the bot.
+ A list of available commands for the DAT.
 
 - `!info` - Display information about the bot
 - `!bot_help` - Display this help message
@@ -73,7 +73,7 @@ Please note that some commands may have security implications or are typically a
 
 ## Premium Plan
 
-- All features from the Free Plan, plus the following:
+ All features from the Free Plan, plus the following:
 
 - `!bot_help`       - Shows the help message for the bot.
 - `!bot_restart`    - Restarts the bot.
