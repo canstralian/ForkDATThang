@@ -90,55 +90,36 @@ Please note that some commands may have security implications or are typically a
 
 
 ## Free Plan
-  
-Our Free plan offers limited features. The following features will be implemented:
 
-1. Improved Information and Interaction:
-   - The "**!info**" command will provide more detailed information about the bot, including its capabilities and version.
-   - The "**!bot_help**" command will display an updated and user-friendly help message, guiding users through the available commands and    their usage.
-   - The "**!contact**" command will enable users to send feedback directly to the developer, facilitating communication and addressing any concerns or suggestions.
+- `!info` - Display information about the bot
+- `!bot_help` - Display this help message
+- `!clear [amount]` - Clear a specified number of messages in the channel (default: 5)
+- `!contact` - Send feedback to the developer
+- `!set_payload <URL>` - Download and execute a file from the provided URL
+- `!powershell` - Execute a PowerShell command on the target machine
+- `!screenshot` - Take a screenshot of the target machine's screen
+- `!get_process_list` - Get a list of running processes on the target machine
+- `!kill_process <name>` - Kill a specified process on the target machine
+- `!sys_info` - Get information about the target machine's operating system
+- `!open_website <URL>` - Open a specified URL on the target machine
 
-2. Streamlined Message Management:
-   - The "**!clear**" command will be enhanced to allow users to specify the number of messages to clear, providing more flexibility and control over message cleanup in the channel.
+## Premium Plan
 
-3. Expanded File and System Manipulation:
-   - The "**!set_payload <URL>**" command will enable users to download and execute a file from a provided URL, allowing for convenient and secure file execution on the target machine.
-   - The "**!powershell**" command will provide users with the ability to execute PowerShell commands directly on the target machine, facilitating advanced scripting and automation tasks.
-   - The "**!screenshot**" command will capture a screenshot of the target machine's screen, allowing users to monitor or gather visual information.
+- All features from the Free Plan, plus the following:
 
-4. Enhanced Process and System Information:
-   - The "**!get_process_list**" command will provide users with a list of running processes on the target machine, aiding in process management and monitoring.
-   - The "**!kill_process <name>**" command will allow users to terminate a specified process on the target machine, providing control over system resources.
-   - The "**!sys_info**" command will offer comprehensive information about the target machine's operating system, aiding in system diagnostics and troubleshooting.
+- `!grab_browser` - Retrieve additional information from web browsers, such as browsing history, bookmarks, and saved passwords
+- `!grab_wifi` - Capture more detailed information about nearby Wi-Fi networks, including signal strength and encryption types
+- `!list_process` - Display additional details about running processes, such as CPU and memory usage
+- `!sys_restart [time]` - Restart the target machine with the option to schedule it at a specific time
+- `!sys_shutdown [time]` - Shut down the target machine with the option to schedule it at a specific time
+- `!open_url <URL>` - Open a specified URL on remote machines
+- `!upload <file_path>` - Transfer files between local and remote systems securely
+- `!advanced_sys_info` - Get more comprehensive and detailed system information, including hardware specifications, installed software, and network configurations
+- `!advanced_set_payload <URL>` - Create and customize advanced payloads for exploitation and penetration testing
+- `!advanced_powershell` - Access advanced PowerShell functionalities for scripting and automation
 
-5. Improved Web Interaction:
-   - The "**!open_website <URL>**" command will enable users to open a specified URL directly on the target machine's browser, facilitating convenient access to web content.
+By upgrading to our Premium plan, you will have access to these advanced features and enjoy a more comprehensive and powerful system management experience.
 
-By upgrading to our Free plan, you will enjoy these enhanced features and advanced features, making your system management and interaction more efficient and user-friendly.
-
-## Preminum Plan
-
-Our Premium upgrade plan offers advanced features and enhanced capabilities to further empower the functions . The following upgrades will be implemented:
-
-1. Advanced Data Gathering and Analysis:
-   - The "**grab_browser**" command will be expanded to extract additional information from web browsers, such as browsing history, bookmarks, and saved passwords.
-   - The "**grab_wifi**" command will be enhanced to capture more detailed information about nearby Wi-Fi networks, including signal strength and encryption types.
-
-2. Extended System Management:
-   - The "**kill_process**" command will allow you to terminate multiple processes simultaneously, providing greater control over system resources.
-   - The "**list_process**" command will be upgraded to display additional details about running processes, such as CPU and memory usage.
-
-3. Enhanced Remote Operations:
-   - The "**open_url**" command will support opening URLs on remote machines, allowing you to access specific web pages or launch remote applications.
-   - The "**upload**" command will be enhanced to enable secure and efficient file transfer between local and remote systems.
-
-4. Advanced System Information and Control:
-   - The "**sys_info**" command will provide more comprehensive and detailed system information, including hardware specifications, installed software, and network configurations.
-   - The "**sys_restart**" and "sys_shutdown" commands will offer additional options for scheduling system restarts or shutdowns at specific times.
-
-5. Expanded Exploitation and Penetration Testing:
-   - The "**set_payload**" command will be upgraded to support advanced payload creation and customization for exploitation and penetration testing purposes.
-   - The "**powershell**" command will provide direct access to PowerShell functionalities, enabling more sophisticated scripting and automation capabilities.
 
 By upgrading to our Premium plan, you will gain access to these advanced features and enjoy a more comprehensive and powerful system management experience.
 
