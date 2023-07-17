@@ -53,6 +53,8 @@ To build the RAT executable (.exe) file, you can use pyinstaller. Follow these s
 
 This RAT is designed to evade detection by traditional antivirus software. However, it's important to note that the effectiveness of evasion techniques may vary over time as antivirus systems improve. While efforts have been made to make the RAT undetectable, it cannot be guaranteed that it will evade all antivirus solutions. It's always recommended to use such tools responsibly and legally.
 
+![TotalVirus](https://github.com/neoxxz/DAT/assets/108510671/40e09838-5aab-47c6-bbf8-308fee01794d)
+
 # Command List
 
  A list of available commands for the DAT.
