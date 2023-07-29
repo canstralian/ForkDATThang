@@ -50,7 +50,7 @@ Contributions to this project are welcome. If you find any issues or have sugges
 If you need help or have any questions, you can join our Discord server (Update Soon) for support and discussions.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+DAT is released under the MIT License. See the [LICENSE](https://github.com/neoxxz/DAT/blob/main/LICENSE) file for more details.
 
 ## Disclaimer
 The creators of this project are not responsible for any unauthorized use or misuse of the software. This tool is intended for educational and ethical purposes only. Use it responsibly and only on devices that you own or have explicit permission to access.
