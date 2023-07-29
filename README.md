@@ -1,6 +1,6 @@
 # Remote Access Trojan (RAT)
 
-![RAT Logo]![_ad328d02-d485-4281-886b-4e7015758383](https://github.com/neoxxz/DAT/assets/108510671/a8d19c36-844f-41a6-a7e2-b168eb776bbe)
+![Discord RAT](https://github.com/neoxxz/DAT/assets/108510671/570806da-a3f7-4cf8-9d25-076ae6aa15d2)
 
 
 ## Description
