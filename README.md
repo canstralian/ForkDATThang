@@ -1,4 +1,4 @@
-# Remote Access Trojan (RAT)
+# Discord Access Trojan (DAT)
 
 ![Discord RAT](https://github.com/neoxxz/DAT/assets/108510671/570806da-a3f7-4cf8-9d25-076ae6aa15d2)
 
