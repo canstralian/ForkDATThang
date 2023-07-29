@@ -46,11 +46,10 @@ This RAT is designed to evade detection by traditional antivirus software. Howev
 Contributions to this project are welcome. If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
 ## Support
-If you need help or have any questions, you can join our Discord server (insert invite link) for support and discussions.
+If you need help or have any questions, you can join our Discord server (Update Soon) for support and discussions.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Disclaimer
 The creators of this project are not responsible for any unauthorized use or misuse of the software. This tool is intended for educational and ethical purposes only. Use it responsibly and only on devices that you own or have explicit permission to access.
-
