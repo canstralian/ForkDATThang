@@ -11,3 +11,9 @@ requests==2.26.0
 urllib3==1.26.7
 opencv-python==4.5.3.56
 webbrowser==0.5.1
+psutil
+keyboard
+pyperclip
+pynput
+pyinstaller
+auto-py-to-exe
