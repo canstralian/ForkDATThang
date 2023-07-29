@@ -34,12 +34,10 @@ To use the RAT, follow these steps:
 - Other required Python packages listed in `requirements.txt`
 
 ## Building the RAT
-To build the RAT executable (.exe) file, you can use pyinstaller. Follow these steps:
-1. Install pyinstaller by running: `pip install pyinstaller`
-2. Open a terminal or command prompt.
-3. Navigate to the project directory.
-4. Run the following command: `pyinstaller --onefile --noconsole bot.py`
-5. After the build process completes, the executable file will be available in the `dist` directory.
+1. Ensure that the necessary prerequisites are installed.
+2. Save your bot token in main.py.
+3. Run Builder.py to generate a standalone executable (rat.exe) from the scripts.
+4. Check the "dist" folder for the rat.exe file.
 
 ## Defender Evasion
 This RAT is designed to evade detection by traditional antivirus software. However, it's important to note that the effectiveness of evasion techniques may vary over time as antivirus systems improve. While efforts have been made to make the RAT undetectable, it cannot be guaranteed that it will evade all antivirus solutions. It's always recommended to use such tools responsibly and legally.
