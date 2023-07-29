@@ -24,7 +24,7 @@ This project is a Remote Access Trojan (RAT) designed to allow remote control an
 - Python 3.6 or higher
 - Discord.py library
 - Other required Python packages listed in `requirements.txt`
-- 
+
 ## Usage
 To use the RAT, follow these steps:
 1. Clone or download the repository.
