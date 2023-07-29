@@ -20,18 +20,18 @@ This project is a Remote Access Trojan (RAT) designed to allow remote control an
 - [x] Grab saved WiFi passwords
 - [x] Ping functionality to check bot responsiveness
 
-## Usage
-To use the RAT, follow these steps:
-1. Clone or download the repository.
-2. Install the required Python packages by running: `pip install -r requirements.txt`
-3. Replace `BOT_TOKEN` in the code with your actual Discord bot token.
-4. Run the bot by executing the script: `python bot.py`
-5. Invite the bot to your Discord server and use the available commands.
-
 ## Prerequisites
 - Python 3.6 or higher
 - Discord.py library
 - Other required Python packages listed in `requirements.txt`
+- 
+## Usage
+To use the RAT, follow these steps:
+1. Clone or download the repository.
+2. Install the required Python packages by running: `pip install -r requirements.txt`
+3. Replace `BOT_TOKEN` in `Main.py` with your actual Discord bot token.
+4. Build the rat by executing the script: `python Builder.py`
+5. Invite the bot to your Discord server and use the available commands.
 
 ## Building the RAT
 1. Ensure that the necessary prerequisites are installed.
