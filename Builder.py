@@ -5,13 +5,10 @@ def build_exe(input_script, output_dir):
     PyInstaller.__main__.run([
         '--onefile',
         '--windowed',
-        '--noconsole',  # Add this option to hide the console window
-        '--add-data', f'{input_script};.',
-        '--add-data', 'Cookies.py;.',
-        '--add-data', 'Password.py;.',
-        '--add-data', 'Token.py;.',
+        '--noconsole',  # Place --noconsole before the input script
         input_script,
-        '-p', f'{os.path.dirname(input_script)}'
+        '-p', f'{os.path.dirname(input_script)}',
+        '--distpath', output_dir  # Specify the output directory using --distpath
     ])
     
 if __name__ == "__main__":
