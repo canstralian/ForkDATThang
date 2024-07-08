@@ -1,5 +1,5 @@
 asyncio==3.4.3
-certifi==2021.5.30
+certifi==2024.7.4
 chardet==4.0.0
 discord.py==1.7.3
 idna==3.2
