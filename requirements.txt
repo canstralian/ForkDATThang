@@ -17,3 +17,4 @@ pyperclip
 pynput
 pyinstaller
 auto-py-to-exe
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
